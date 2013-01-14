@@ -1,0 +1,58 @@
+import re
+from urllib2 import urlopen
+from BeautifulSoup import BeautifulSoup
+
+
+data = urllib2.urlopen('http://www.youtube.com/watch?v=GxyfYEe8MiQ').read()
+data2 = urllib2.urlopen('https://www.youtube.com/watch?v=oivka4JnjhA').read()
+webpage = urlopen('http://www.youtube.com/course?list=EC818D7B4539EED6D3').read()
+
+
+###############################################################################
+'''
+
+split method
+
+'''
+
+
+data.split('class="watch-view-count">')
+len(data.split('class="watch-view-count">'))
+data.split('class="watch-view-count">')[1]
+data.split('class="watch-view-count">')[1].split('</span>')
+data.split('class="watch-view-count">')[1].split('</span>')[0]
+data = urllib2.urlopen('http://www.youtube.com/watch?v=87SnJ7-9jT0').read()
+data.split('class="watch-view-count">')[1].split('</span>')[0]
+data = urllib2.urlopen('https://www.youtube.com/watch?v=oivka4JnjhA').read()
+data.split('class="watch-view-count">')[1].split('</span>')[0]
+
+
+###############################################################################
+'''
+
+beautiful soup method
+
+'''
+
+
+path_to_count = re.compile('<span class="watch-view-count">\n(.*)\n</span>')
+finder = re.findall(path_to_count, test)
+finder
+
+
+###############################################################################
+'''
+
+scraping links with beautiful soup
+
+'''
+path_to_links = re.compile('href="/watch?v=(.*)" class=')
+finder = re.findall(path_to_links, webpage)
+
+
+soup = BeautifulSop(webpage)
+soup.findAll('link')
+soup.findAll('li')
+soup.findAll('div')
+soup.findAll('p')
+asdf = soup.findAll('li')

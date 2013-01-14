@@ -9,7 +9,7 @@ Usage:
 
 import gdata.youtube.service
 
-target_video = '87SnJ7-9jT0'
+target_video = '9bZkp7q19f0'
 yt_service = gdata.youtube.service.YouTubeService()
 yt_service.ssl = True
 yt_service.developer_key = 'AI39si6rrh_W0KC3Pl9RPEij-S11vBt-GRFBCBRN25kZ_DHCTNlZnHhWAn4_CUT3JA1RYyHhWB31IXBwzkqYgBd0tYahhYqs1g'
